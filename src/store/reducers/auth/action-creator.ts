@@ -1,15 +1,10 @@
 import { message } from 'antd';
+
 import { type AppDispatch } from '../..';
-import { type User } from '../../../models/User';
-import {
-  AuthActionsEnum,
-  SetAuthAction,
-  SetErrorAction,
-  SetIsLoadingAction,
-  type SetUserAction,
-} from '../@types/auth';
-import { findUser } from '../../../utils/helpers/findUser';
 import UserService from '../../../api/UserService';
+import { type User } from '../../../models/User';
+import { findUser } from '../../../utils/helpers/findUser';
+import { AuthActionsEnum, SetAuthAction, SetErrorAction, SetIsLoadingAction, type SetUserAction } from '../@types/auth';
 
 export const AuthActionCreators = {
   setUser(user: User): SetUserAction {
@@ -57,9 +52,7 @@ export const AuthActionCreators = {
           dispatch(AuthActionCreators.setIsLoading(false));
         }, 1000);
       } catch (error) {
-        dispatch(
-          AuthActionCreators.setError('An error occured while Logging in')
-        );
+        dispatch(AuthActionCreators.setError('An error occured while Logging in'));
         message.error('An error occured while Logging in');
       }
     };

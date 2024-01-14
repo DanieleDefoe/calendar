@@ -1,8 +1,9 @@
 import { Button, Form, Input, Row } from 'antd';
-import { rules } from '../utils/rules';
+
+import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { User } from '../models/User';
-import { useActions } from '../hooks/useActions';
+import { rules } from '../utils/rules';
 
 const { Item } = Form;
 
@@ -16,18 +17,10 @@ const LoginForm = () => {
 
   return (
     <Form onFinish={submit}>
-      <Item
-        label="Username"
-        name="username"
-        rules={[rules.required('Please enter your username!')]}
-      >
+      <Item label="Username" name="username" rules={[rules.required('Please enter your username!')]}>
         <Input />
       </Item>
-      <Item
-        label="Password"
-        name="password"
-        rules={[rules.required('Please enter your password!')]}
-      >
+      <Item label="Password" name="password" rules={[rules.required('Please enter your password!')]}>
         <Input type="password" />
       </Item>
       <Row justify="space-between">

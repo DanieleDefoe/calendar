@@ -34,8 +34,4 @@ export interface SetIsLoadingAction {
   payload: boolean;
 }
 
-export type AuthAction =
-  | SetAuthAction
-  | SetErrorAction
-  | SetUserAction
-  | SetIsLoadingAction;
+export type AuthAction = SetAuthAction | SetErrorAction | SetUserAction | SetIsLoadingAction;

@@ -1,10 +1,11 @@
 import { message } from 'antd';
+
 import { AppDispatch } from '../..';
+import UserService from '../../../api/UserService';
 import { IEvent } from '../../../models/IEvent';
 import { User } from '../../../models/User';
-import { EventActionEnum } from '../@types/event';
-import UserService from '../../../api/UserService';
 import { authorOrGuest } from '../../../utils/helpers/authorOfGuest';
+import { EventActionEnum } from '../@types/event';
 
 export const EventActionCreators = {
   setGuests: (payload: Array<User>) => ({
@@ -40,9 +41,7 @@ export const EventActionCreators = {
     try {
       const events = localStorage.getItem('events') ?? '[]';
       const json = JSON.parse(events) as IEvent[];
-      const currentUserEvents = json.filter((event) =>
-        authorOrGuest(event, username)
-      );
+      const currentUserEvents = json.filter((event) => authorOrGuest(event, username));
       dispatch(EventActionCreators.setEvents(currentUserEvents));
     } catch (err) {
       console.log(err);

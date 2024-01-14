@@ -1,9 +1,12 @@
-import { Layout, message } from 'antd';
-import Navbar from '@/components/Navbar';
-import AppRouter from './router/AppRouter';
 import { useEffect } from 'react';
+
+import { Layout, message } from 'antd';
+
+import Navbar from '@/components/Navbar';
+
 import { useActions } from './hooks/useActions';
 import { User } from './models/User';
+import AppRouter from './router/AppRouter';
 
 const { Content } = Layout;
 

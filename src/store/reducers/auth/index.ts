@@ -1,9 +1,5 @@
 import type { User } from '../../../models/User';
-import {
-  AuthActionsEnum,
-  type AuthAction,
-  type AuthState,
-} from '../@types/auth';
+import { type AuthAction, AuthActionsEnum, type AuthState } from '../@types/auth';
 
 const initialState: AuthState = {
   isAuth: false,
@@ -12,10 +8,7 @@ const initialState: AuthState = {
   isLoading: false,
 };
 
-export default function authReducer(
-  state = initialState,
-  action: AuthAction
-): AuthState {
+export default function authReducer(state = initialState, action: AuthAction): AuthState {
   switch (action.type) {
     case AuthActionsEnum.SET_AUTH:
       return { ...state, isAuth: action.payload, isLoading: false };

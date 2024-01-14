@@ -1,9 +1,11 @@
-import { Button, DatePicker, Form, Input, Row, Select } from 'antd';
-import { rules } from '../utils/rules';
-import { User } from '../models/User';
 import { FC } from 'react';
-import { IEvent } from '../models/IEvent';
+
+import { Button, DatePicker, Form, Input, Row, Select } from 'antd';
 import { Moment } from 'moment';
+
+import { IEvent } from '../models/IEvent';
+import { User } from '../models/User';
+import { rules } from '../utils/rules';
 
 const { Item } = Form;
 
@@ -21,10 +23,7 @@ const EventForm: FC<Props> = ({ guests, submit }) => {
       <Item
         label="Event date"
         name="date"
-        rules={[
-          rules.required(),
-          rules.isDateAfter('You may not add events for the past!'),
-        ]}
+        rules={[rules.required(), rules.isDateAfter('You may not add events for the past!')]}
       >
         <DatePicker />
       </Item>

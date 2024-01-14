@@ -1,12 +1,14 @@
-import { Button, Layout, Modal, Row } from 'antd';
-import EventCalendar from '../components/Calendar';
 import { useEffect, useState } from 'react';
+
+import { Button, Layout, Modal, Row } from 'antd';
+import { Moment } from 'moment';
+
+import EventCalendar from '../components/Calendar';
 import EventForm from '../components/EventForm';
 import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypedSelector';
-import { Moment } from 'moment';
-import { formatDate } from '../utils/helpers/date';
 import { IEvent } from '../models/IEvent';
+import { formatDate } from '../utils/helpers/date';
 
 type SubmitValues = IEvent & { date: Moment | null };
 
@@ -39,12 +41,7 @@ const Event = () => {
       <Row justify="center">
         <Button onClick={() => setOpen(true)}>Add Event</Button>
       </Row>
-      <Modal
-        title="Add Event"
-        open={open}
-        footer={null}
-        onCancel={() => setOpen(false)}
-      >
+      <Modal title="Add Event" open={open} footer={null} onCancel={() => setOpen(false)}>
         <EventForm guests={guests} submit={submit} />
       </Modal>
     </Layout>
