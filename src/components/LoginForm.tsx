@@ -1,9 +1,9 @@
 import { Button, Form, Input, Row } from 'antd';
 
-import { useActions } from '../hooks/useActions';
-import { useTypedSelector } from '../hooks/useTypedSelector';
-import { User } from '../models/User';
-import { rules } from '../utils/rules';
+import { useActions } from '@/hooks/useActions';
+import { useTypedSelector } from '@/hooks/useTypedSelector';
+import { User } from '@/models/User';
+import { rules } from '@/utils/rules';
 
 const { Item } = Form;
 

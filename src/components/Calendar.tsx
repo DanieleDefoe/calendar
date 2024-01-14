@@ -3,8 +3,8 @@ import { FC } from 'react';
 import { Calendar } from 'antd';
 import { Moment } from 'moment';
 
-import { IEvent } from '../models/IEvent';
-import { dateCellRender } from '../utils/renderDateCell';
+import { IEvent } from '@/models/IEvent';
+import { dateCellRender } from '@/utils/renderDateCell';
 
 interface Props {
   events: Array<IEvent>;

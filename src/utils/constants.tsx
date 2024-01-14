@@ -1,9 +1,9 @@
 import { ItemType, MenuItemType } from 'antd/es/menu/hooks/useItems';
 import { Link } from 'react-router-dom';
 
-import { RouteNames } from '../routes';
-import { store } from '../store';
-import { AuthActionCreators } from '../store/reducers/auth/action-creator';
+import { RouteNames } from '@/routes';
+import { store } from '@/store';
+import { AuthActionCreators } from '@/store/reducers/auth/action-creator';
 
 export const publicMenuItems: ItemType<MenuItemType>[] = [
   {

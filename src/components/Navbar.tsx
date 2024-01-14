@@ -1,7 +1,7 @@
 import { Layout, Menu, Row } from 'antd';
 
-import { useTypedSelector } from '../hooks/useTypedSelector';
-import { privateMenuItems, publicMenuItems } from '../utils/constants';
+import { useTypedSelector } from '@/hooks/useTypedSelector';
+import { privateMenuItems, publicMenuItems } from '@/utils/constants';
 
 const { Header } = Layout;
 

@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { Button, DatePicker, Form, Input, Row, Select } from 'antd';
 import { Moment } from 'moment';
 
-import { IEvent } from '../models/IEvent';
-import { User } from '../models/User';
-import { rules } from '../utils/rules';
+import { IEvent } from '@/models/IEvent';
+import { User } from '@/models/User';
+import { rules } from '@/utils/rules';
 
 const { Item } = Form;
 

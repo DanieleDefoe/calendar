@@ -1,10 +1,11 @@
 import { message } from 'antd';
 
+import UserService from '@/api/UserService';
+import { IEvent } from '@/models/IEvent';
+import { User } from '@/models/User';
+import { authorOrGuest } from '@/utils/helpers/authorOfGuest';
+
 import { AppDispatch } from '../..';
-import UserService from '../../../api/UserService';
-import { IEvent } from '../../../models/IEvent';
-import { User } from '../../../models/User';
-import { authorOrGuest } from '../../../utils/helpers/authorOfGuest';
 import { EventActionEnum } from '../@types/event';
 
 export const EventActionCreators = {

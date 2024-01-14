@@ -1,5 +1,5 @@
-import { IEvent } from '../../../models/IEvent';
-import { User } from '../../../models/User';
+import { IEvent } from '@/models/IEvent';
+import { User } from '@/models/User';
 
 export interface EventState {
   guests: User[];

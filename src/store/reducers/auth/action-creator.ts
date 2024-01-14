@@ -1,9 +1,10 @@
 import { message } from 'antd';
 
+import UserService from '@/api/UserService';
+import { type User } from '@/models/User';
+import { findUser } from '@/utils/helpers/findUser';
+
 import { type AppDispatch } from '../..';
-import UserService from '../../../api/UserService';
-import { type User } from '../../../models/User';
-import { findUser } from '../../../utils/helpers/findUser';
 import { AuthActionsEnum, SetAuthAction, SetErrorAction, SetIsLoadingAction, type SetUserAction } from '../@types/auth';
 
 export const AuthActionCreators = {

@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 import { Button, Layout, Modal, Row } from 'antd';
 import { Moment } from 'moment';
 
-import EventCalendar from '../components/Calendar';
-import EventForm from '../components/EventForm';
-import { useActions } from '../hooks/useActions';
-import { useTypedSelector } from '../hooks/useTypedSelector';
-import { IEvent } from '../models/IEvent';
-import { formatDate } from '../utils/helpers/date';
+import EventCalendar from '@/components/Calendar';
+import EventForm from '@/components/EventForm';
+import { useActions } from '@/hooks/useActions';
+import { useTypedSelector } from '@/hooks/useTypedSelector';
+import { IEvent } from '@/models/IEvent';
+import { formatDate } from '@/utils/helpers/date';
 
 type SubmitValues = IEvent & { date: Moment | null };
 

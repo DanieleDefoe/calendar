@@ -1,6 +1,6 @@
 import { Moment } from 'moment';
 
-import { IEvent } from '../models/IEvent';
+import { IEvent } from '@/models/IEvent';
 import { formatDate } from './helpers/date';
 
 export const dateCellRender = (value: Moment, events: Array<IEvent>) => {
